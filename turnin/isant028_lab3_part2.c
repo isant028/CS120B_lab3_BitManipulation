@@ -15,7 +15,7 @@
 int main(void) {
 
 	DDRA = 0x00; PORTA = 0xFF; 
-	DDRC = 0xFF; PORTD = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
 
 	unsigned char tmpB = 0x00; 
 	unsigned char tmpA = 0x00;
@@ -23,7 +23,7 @@ int main(void) {
 
 	while(1) {
 		tmpA = PINA & 0x0F; 
-		
+		tmpB = 0x00; 		
 		if(tmpA <= 2){
 			tmpB = 0x20; 
 		}

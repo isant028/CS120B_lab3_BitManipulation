@@ -23,7 +23,8 @@ int main(void) {
 
 	while(1) {
 		tmpA = PINA & 0x0F; 
-		
+		tmpB = 0x00;
+		seat = PINA & 0x70; 		
 		if(tmpA <= 2){
 			tmpB = 0x20; 
 		}
