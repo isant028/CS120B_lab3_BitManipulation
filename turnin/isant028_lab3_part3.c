@@ -25,11 +25,15 @@ int main(void) {
 		tmpA = PINA & 0x0F; 
 		tmpB = 0x00;
 		seat = PINA & 0x70; 		
-		if(tmpA <= 2){
-			tmpB = 0x20; 
+		
+		if(temp == 0x00) {
+		tmpB = tmpB | 0x40;
+	}
+		else if(tmpA <= 2){
+			tmpB = 0x60; 
 		}
 		else if(tmpA <= 4){
-			tmpB = 0x30; 
+			tmpB = 0x70; 
 		}
 		else if(tmpA <= 6){
 			tmpB = 0x38; 
@@ -44,9 +48,6 @@ int main(void) {
 			tmpB = 0x3F; 
 		}
 
-		if (tmpA <= 4){
-			tmpB  = tmpB | 0x40; 
-		}
 		if(seat == 0x03){
 			tmpB = tmpB | 0x80; 
 		}
