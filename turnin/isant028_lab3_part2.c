@@ -24,7 +24,7 @@ int main(void) {
 	while(1) {
 		tmpA = PINA & 0x0F; 
 		tmpB = 0x00; 		
-		if(temp == 0x00) {
+		if(tmpA == 0x00) {
 			tmpB = tmpB | 0x40;
 		}
 

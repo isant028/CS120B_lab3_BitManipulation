@@ -26,7 +26,7 @@ int main(void) {
 		tmpB = 0x00;
 		seat = PINA & 0x70; 		
 		
-		if(temp == 0x00) {
+		if(tmpA == 0x00) {
 		tmpB = tmpB | 0x40;
 	}
 		else if(tmpA <= 2){
