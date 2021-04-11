@@ -1,7 +1,7 @@
 /*	Author: isant028
  *  Partner(s) Name: 
  *	Lab Section:
- *	Assignment: Lab #3  Exercise #1
+ *	Assignment: Lab #3  Exercise #2
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -15,7 +15,7 @@
 int main(void) {
 
 	DDRA = 0x00; PORTA = 0xFF; 
-	DDRB = 0xFF; PORTB = 0x00;
+	DDRC = 0xFF; PORTD = 0x00;
 
 	unsigned char tmpB = 0x00; 
 	unsigned char tmpA = 0x00;
@@ -47,7 +47,7 @@ int main(void) {
 			tmpB  = tmpB | 0x40; 
 		}
 
-		PORTB = tmpB; 
+		PORTC = tmpB; 
 	}
 
 	return 0;

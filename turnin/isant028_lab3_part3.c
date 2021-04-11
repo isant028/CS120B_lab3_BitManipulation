@@ -15,7 +15,7 @@
 int main(void) {
 
 	DDRA = 0x00; PORTA = 0xFF; 
-	DDRB = 0xFF; PORTB = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
 
 	unsigned char tmpB = 0x00; 
 	unsigned char tmpA = 0x00;
@@ -49,7 +49,7 @@ int main(void) {
 		if(seat == 0x03){
 			tmpB = tmpB | 0x80; 
 		}
-		PORTB = tmpB; 
+		PORTC = tmpB; 
 	}
 
 	return 0;
