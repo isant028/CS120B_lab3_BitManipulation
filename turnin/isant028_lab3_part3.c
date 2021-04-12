@@ -29,28 +29,29 @@ int main(void) {
 		if(tmpA == 0x00) {
 		tmpB = tmpB | 0x40;
 	}
-		else if(tmpA <= 2){
+		else if(tmpA == 1 || tmpA == 2){
 			tmpB = 0x60; 
 		}
-		else if(tmpA <= 4){
+		else if(tmpA == 3 || tmpA == 4){
 			tmpB = 0x70; 
 		}
-		else if(tmpA <= 6){
+		else if(tmpA == 5 || tmpA == 6){
 			tmpB = 0x38; 
 		}
-		else if(tmpA <= 9){
+		else if(tmpA == 7 || tmpA == 8 || tmpA == 9){
 			tmpB = 0x3C; 
 		}
-		else if(tmpA <= 12){
+		else if(tmpA == 10 || tmpA == 11 || tmpA == 12){
 			tmpB = 0x3E; 
 		}
-		else if(tmpA <= 15){
+		else if(tmpA == 13 || tmpA == 14 || tmpA == 15){
 			tmpB = 0x3F; 
 		}
 
-		if(seat == 0x03){
-			tmpB = tmpB | 0x80; 
+		if ( seat == 0x30){
+			tmpB = tmpB | 0x80;
 		}
+
 		PORTC = tmpB; 
 	}
 
